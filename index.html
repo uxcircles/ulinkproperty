@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-Hant-HK" class="l-zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>英聯物業管理 ULINK | 利物浦睇樓、買樓、收租、Airbnb 管家</title>
+<meta name="description" content="利物浦睇樓、買樓、收租同 Airbnb 管家，收費全部寫明。">
+<link rel="alternate" hreflang="zh-Hant-HK" href="https://uxcircles.github.io/ulinkproperty/">
+<link rel="alternate" hreflang="en-GB" href="https://uxcircles.github.io/ulinkproperty/en/">
+<link rel="alternate" hreflang="x-default" href="https://uxcircles.github.io/ulinkproperty/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0e5a45">
+<link rel="preload" href="assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/wenkai-tc-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script defer src="assets/site.js?v=1"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至內容</a>
+<div class="concept-bar" role="note">
+  <div class="concept-inner">
+    <p class="concept-text"><span class="concept-tag">概念</span><span class="concept-long">概念設計展示，並非<a href="https://www.ulinkproperty.co.uk/" target="_blank" rel="noopener">英聯物業管理官方網站</a>。</span></p>
+    <a class="concept-credit" href="https://ux-circles.com/professionals" target="_blank" rel="noopener"><span class="concept-by">設計：</span><strong>UX CIRCLES</strong><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path class="tm-card" d="M14 6h36a4 4 0 0 1 4 4v44a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4Z"/><circle class="tm-hole" cx="32" cy="15" r="4"/><path class="tm-u" d="M22 26v14a10 10 0 0 0 20 0V26"/></svg>
+      <span class="brand-zh" lang="zh-Hant-HK">英聯物業管理</span>
+      <span class="brand-en" lang="en">ULINK Property Services</span>
+    </a>
+    <nav class="nav" aria-label="主選單"><a href="services.html">服務及收費</a><a href="airbnb.html">Airbnb 管家</a><a href="team.html">團隊</a><a href="contact.html">聯絡</a></nav>
+    <div class="langs"><a href="" lang="zh-Hant-HK" hreflang="zh-Hant-HK" aria-current="true">中文</a><a href="en/" lang="en-GB" hreflang="en-GB">EN</a></div>
+    <a class="head-cta" href="contact.html">查詢</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">選單</button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <nav class="wrap menu-in" aria-label="選單"><a href="services.html">服務及收費</a><a href="airbnb.html">Airbnb 管家</a><a href="team.html">團隊</a><a href="contact.html">聯絡</a><div class="menu-langs"><a href="" lang="zh-Hant-HK" hreflang="zh-Hant-HK" aria-current="true">中文</a><a href="en/" lang="en-GB" hreflang="en-GB">EN</a></div></nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-top">
+    <h1 id="h1"><span class=nb>每項收費，</span><span class=nb>寫明喺價錢牌上</span></h1>
+    <p class="lede">輸入數字，即刻睇我哋收幾多、你袋幾多。</p>
+  </div>
+  <div class="hero-stage">
+    <img class="hero-photo" src="assets/img/house.webp" alt="利物浦一間已售出的紅磚半獨立屋" width="1600" height="1200" fetchpriority="high">
+    <div class="wrap">
+      <form class="board" id="calc" aria-label="收費計算機" onsubmit="return false">
+        <div class="board-in">
+          <fieldset class="modes">
+            <legend class="sr">服務</legend>
+            <label><input type="radio" name="mode" value="let" checked><span>長租</span></label>
+            <label><input type="radio" name="mode" value="bnb"><span>Airbnb</span></label>
+            <label><input type="radio" name="mode" value="buy"><span>買樓</span></label>
+          </fieldset>
+          <div class="fields">
+            <label class="f" data-for="let"><span>每月租金</span><span class="money"><i>£</i><input id="c-rent" type="number" inputmode="numeric" min="0" step="10" value="750"></span></label>
+            <label class="f" data-for="bnb" hidden><span>每晚租金</span><span class="money"><i>£</i><input id="c-night" type="number" inputmode="numeric" min="0" step="5" value="85"></span></label>
+            <label class="f" data-for="bnb" hidden><span>每月入住晚數</span><span class="money"><input id="c-nights" type="number" inputmode="numeric" min="0" max="31" step="1" value="18"></span></label>
+            <label class="f" data-for="buy" hidden><span>樓價</span><span class="money"><i>£</i><input id="c-price" type="number" inputmode="numeric" min="0" step="1000" value="120000"></span></label>
+            <label class="f f-rate"><span>£1 = HK$</span><span class="money"><input id="c-rate" type="number" inputmode="decimal" min="1" step="0.1" value="10.4"></span></label>
+          </div>
+          <div class="string" aria-live="polite" id="c-out"></div>
+        </div>
+        <p class="board-note">按公佈收費估算，以報價為準。</p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="strip" aria-label="利物浦">
+  <div class="wrap strip-in">
+    <figure><img src="assets/img/anfield-street.webp" alt="利物浦一條有足球壁畫的排屋街" width="1200" height="799" loading="lazy" decoding="async"><figcaption>辦公室喺 Breck Road，近 Anfield 球場</figcaption></figure>
+    <figure><img src="assets/img/keys.webp" alt="交收鎖匙" width="900" height="1125" loading="lazy" decoding="async"><figcaption>由出價到拎鎖匙</figcaption></figure>
+    <figure><img src="assets/img/liver-building.webp" alt="利物浦皇家利物大廈鐘樓" width="900" height="1125" loading="lazy" decoding="async"><figcaption>利物浦，離香港 9,600 公里</figcaption></figure>
+  </div>
+</section>
+
+<section class="sec tags-sec" aria-labelledby="h-fees">
+  <div class="wrap">
+    <h2 id="h-fees">五項服務，五個價錢</h2>
+    <p class="intro">唔 hard sell，唔會事後加錢。註明「後付」嘅，做完先收。</p>
+    <div class="rack">
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">睇樓報告</span><b class="tag-price">HK$450</b><span class="tag-note">睇完先俾</span><p class="tag-body">街道、每間房、電錶水錶煤氣錶全部拍片，附價錢意見。</p></div>
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">買樓一條龍</span><b class="tag-price">1%</b><span class="tag-note">樓價，成交後付</span><p class="tag-body">出價、地產代理、律師、文件，直到拎鎖匙。</p></div>
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">搵租客</span><b class="tag-price">一個月租</b><span class="tag-note">租金</span><p class="tag-body">建議租金、影相、放盤、帶睇、租約、按金登記。</p></div>
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">全方位管理</span><b class="tag-price">12%</b><span class="tag-note">租金</span><p class="tag-body">聯絡租客、安排維修，退租時處理按金索償。</p></div>
+      <div class="tag tag-red"><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">Airbnb</span><b class="tag-price">15% <small>+ VAT</small></b><span class="tag-note">訂房收入</span><p class="tag-body">上架、定價、清潔、check-in，24 小時回覆。</p></div>
+    </div>
+    <p class="more"><a class="btn" href="services.html">每項收費包括乜嘢</a></p>
+  </div>
+</section>
+
+<section class="sec viewing" aria-labelledby="h-view">
+  <div class="wrap view-in">
+    <figure class="view-photo"><img src="assets/img/hallway.webp" alt="屋內走廊，盡頭係大門" width="1200" height="1500" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2 id="h-view">HK$450，我哋代你去睇樓</h2>
+      <p class="intro">將放盤連結發俾我哋，我哋約地產代理，現場拍片：</p>
+      <ol class="report">
+        <li>街道環境，附近有冇空置屋</li>
+        <li>全屋每間房同後花園</li>
+        <li>電錶、水錶、煤氣錶同喉管</li>
+        <li>有冇漏水，附維修預算</li>
+        <li>泊車位或車房</li>
+        <li>結論：價錢合唔合理，值唔值得買</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-band">
+  <img class="band-photo" src="assets/img/terrace.webp" alt="一排紅磚排屋" width="1600" height="1066" loading="lazy" decoding="async">
+  <div class="wrap band-in">
+    <h2 id="h-band">睇中咗？我哋跟到拎鎖匙</h2>
+    <p>出價、同地產代理傾、搵律師、跟文件到收樓，收樓價 1%，成交後先付。</p>
+  </div>
+</section>
+
+<section class="sec bnb" aria-labelledby="h-bnb">
+  <div class="wrap bnb-in">
+    <div>
+      <img class="badge" src="assets/img/superhost.webp" alt="Airbnb Superhost" width="600" height="408" loading="lazy" decoding="async">
+      <h2 id="h-bnb">Airbnb，由裝修到接客</h2>
+      <blockquote lang="en"><p>“Fast communication! … The home was very clean and had clear listed instructions on how to operate everything.”</p>
+        <cite>住客評價：Michael，美國佛羅里達</cite></blockquote>
+      <p><a class="btn" href="airbnb.html">Airbnb 管家點運作</a></p>
+    </div>
+    <figure><img src="assets/img/airbnb-room.webp" alt="深色牆身、銅燈的客房" width="1600" height="1066" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="sec team-sec" aria-labelledby="h-team">
+  <div class="wrap team-in">
+    <figure><img src="assets/img/hong-kong.webp" alt="黃昏的維多利亞港" width="1600" height="1066" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2 id="h-team">2016 年起喺利物浦買樓</h2>
+      <p class="intro">我哋自己都係香港投資者，知道人喺香港買英國樓會遇到乜嘢問題。</p>
+      <ul class="names">
+        <li><b>Bryan Wong</b> 買樓改建</li>
+        <li><b>Evan Wong</b> 出租法規同租客</li>
+        <li><b>Hugo Wong</b> 維修同本地裝修團隊</li>
+      </ul>
+      <p><a class="btn btn-line" href="team.html">認識團隊</a></p>
+    </div>
+  </div>
+</section>
+<section class="sec where" aria-labelledby="h-where">
+  <div class="wrap where-in">
+    <div class="mapcard" data-map>
+      <svg class="map-fallback" viewBox="0 0 600 420" role="img" aria-label="示意圖：299 Breck Road，近 Anfield 球場">
+        <rect width="600" height="420" fill="#eef0ea"/>
+        <path d="M-10 300 C150 270 330 250 610 140" stroke="#fff" stroke-width="22" fill="none"/>
+        <path d="M200 -10 L260 430" stroke="#fff" stroke-width="12" fill="none"/>
+        <rect x="330" y="40" width="150" height="110" rx="16" fill="#d9e4d4"/>
+        <text x="405" y="102" text-anchor="middle" font-size="18" fill="#3c4a40">Anfield</text>
+        <text x="80" y="268" font-size="16" fill="#3c4a40" transform="rotate(-8 80 268)">Breck Road</text>
+        <circle cx="300" cy="248" r="12" fill="#c8102e"/>
+      </svg>
+    </div>
+    <div class="where-text">
+      <h2 id="h-where">299 Breck Road, Liverpool</h2>
+      <p>辦公室喺利物浦本地，有事同一個星期就可以上門。</p>
+      <p class="addr">299 Breck Road<br>Liverpool L5 6PU<br><a href="mailto:info@ulinkproperty.co.uk">info@ulinkproperty.co.uk</a><br><a href="https://www.facebook.com/ulinkps" target="_blank" rel="noopener">Facebook @ULINKPS</a></p>
+      <img class="where-photo" src="assets/img/anfield-gates.webp" alt="Anfield 球場大閘" width="1200" height="799" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+</main>
+<script type="application/json" id="map-data">{"home": [-2.9553686, 53.4245782], "mark": "https://uxcircles.github.io/ulinkproperty/assets/img/favicon.svg", "label": "英聯物業 299 Breck Road", "places": [{"at": [-2.9608, 53.4308], "name": "Anfield 球場"}]}</script>
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <svg class="foot-mark" viewBox="0 0 64 64" aria-hidden="true"><path class="tm-card" d="M14 6h36a4 4 0 0 1 4 4v44a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4Z"/><circle class="tm-hole" cx="32" cy="15" r="4"/><path class="tm-u" d="M22 26v14a10 10 0 0 0 20 0V26"/></svg>
+      <p><strong lang="zh-Hant-HK">英聯物業管理</strong><br><span lang="en">ULINK Property Services Limited</span></p>
+    </div>
+    <div class="foot-col">
+      <p>299 Breck Road, Liverpool L5 6PU<br><a href="mailto:info@ulinkproperty.co.uk">info@ulinkproperty.co.uk</a><br><a href="https://www.facebook.com/ulinkps" target="_blank" rel="noopener">Facebook @ULINKPS</a></p>
+    </div>
+    <div class="foot-col">
+      <p>英格蘭註冊公司，公司號碼 12359766<br>
+      Property Redress Scheme 會員，已於 ICO 登記。</p>
+      <p><a href="privacy.html">私隱政策</a> · <div class="foot-langs"><a href="" lang="zh-Hant-HK" hreflang="zh-Hant-HK" aria-current="true">中文</a><a href="en/" lang="en-GB" hreflang="en-GB">EN</a></div></p>
+    </div>
+  </div>
+  <div class="wrap"><p class="concept-note">非官方概念設計：<a href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></p></div>
+</footer>
+<nav class="mbar" aria-label="快捷操作">
+  <a href="mailto:info@ulinkproperty.co.uk">電郵</a>
+  <a href="https://m.me/ulinkps" target="_blank" rel="noopener">Facebook 訊息</a>
+  <a class="mbar-main" href="index.html#calc">計收費</a>
+</nav>
+</body>
+</html>

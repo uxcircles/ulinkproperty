@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-GB" class="l-en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ULINK Property Services | Liverpool property management for Hong Kong owners</title>
+<meta name="description" content="Liverpool viewings, buying, letting and Airbnb management with fees on the page.">
+<link rel="alternate" hreflang="zh-Hant-HK" href="https://uxcircles.github.io/ulinkproperty/">
+<link rel="alternate" hreflang="en-GB" href="https://uxcircles.github.io/ulinkproperty/en/">
+<link rel="alternate" hreflang="x-default" href="https://uxcircles.github.io/ulinkproperty/">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0e5a45">
+<link rel="preload" href="../assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script defer src="../assets/site.js?v=1"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="concept-bar" role="note">
+  <div class="concept-inner">
+    <p class="concept-text"><span class="concept-tag">Concept</span><span class="concept-long">Redesign concept. Not the <a href="https://www.ulinkproperty.co.uk/" target="_blank" rel="noopener">official ULINK Property Services website</a>.</span></p>
+    <a class="concept-credit" href="https://ux-circles.com/professionals" target="_blank" rel="noopener"><span class="concept-by">Designed by </span><strong>UX CIRCLES</strong><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+  </div>
+</div>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path class="tm-card" d="M14 6h36a4 4 0 0 1 4 4v44a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4Z"/><circle class="tm-hole" cx="32" cy="15" r="4"/><path class="tm-u" d="M22 26v14a10 10 0 0 0 20 0V26"/></svg>
+      <span class="brand-zh" lang="zh-Hant-HK">英聯物業管理</span>
+      <span class="brand-en" lang="en">ULINK Property Services</span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="services.html">Services &amp; fees</a><a href="airbnb.html">Airbnb</a><a href="team.html">Team</a><a href="contact.html">Contact</a></nav>
+    <div class="langs"><a href="../" lang="zh-Hant-HK" hreflang="zh-Hant-HK">中文</a><a href="../en/" lang="en-GB" hreflang="en-GB" aria-current="true">EN</a></div>
+    <a class="head-cta" href="contact.html">Ask a question</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <nav class="wrap menu-in" aria-label="Menu"><a href="services.html">Services &amp; fees</a><a href="airbnb.html">Airbnb</a><a href="team.html">Team</a><a href="contact.html">Contact</a><div class="menu-langs"><a href="../" lang="zh-Hant-HK" hreflang="zh-Hant-HK">中文</a><a href="../en/" lang="en-GB" hreflang="en-GB" aria-current="true">EN</a></div></nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-top">
+    <h1 id="h1">Every fee, written on the tag</h1>
+    <p class="lede">Type your rent or price: see what we charge and what you keep.</p>
+  </div>
+  <div class="hero-stage">
+    <img class="hero-photo" src="../assets/img/house.webp" alt="Brick semi-detached house in Liverpool with a sold sign" width="1600" height="1200" fetchpriority="high">
+    <div class="wrap">
+      <form class="board" id="calc" aria-label="Fee calculator" onsubmit="return false">
+        <div class="board-in">
+          <fieldset class="modes">
+            <legend class="sr">Service</legend>
+            <label><input type="radio" name="mode" value="let" checked><span>Letting</span></label>
+            <label><input type="radio" name="mode" value="bnb"><span>Airbnb</span></label>
+            <label><input type="radio" name="mode" value="buy"><span>Buying</span></label>
+          </fieldset>
+          <div class="fields">
+            <label class="f" data-for="let"><span>Monthly rent</span><span class="money"><i>£</i><input id="c-rent" type="number" inputmode="numeric" min="0" step="10" value="750"></span></label>
+            <label class="f" data-for="bnb" hidden><span>Per night</span><span class="money"><i>£</i><input id="c-night" type="number" inputmode="numeric" min="0" step="5" value="85"></span></label>
+            <label class="f" data-for="bnb" hidden><span>Nights a month</span><span class="money"><input id="c-nights" type="number" inputmode="numeric" min="0" max="31" step="1" value="18"></span></label>
+            <label class="f" data-for="buy" hidden><span>Property price</span><span class="money"><i>£</i><input id="c-price" type="number" inputmode="numeric" min="0" step="1000" value="120000"></span></label>
+            <label class="f f-rate"><span>£1 = HK$</span><span class="money"><input id="c-rate" type="number" inputmode="decimal" min="1" step="0.1" value="10.4"></span></label>
+          </div>
+          <div class="string" aria-live="polite" id="c-out"></div>
+        </div>
+        <p class="board-note">An estimate from our published fees.</p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="strip" aria-label="Liverpool">
+  <div class="wrap strip-in">
+    <figure><img src="../assets/img/anfield-street.webp" alt="Terraced street in Liverpool with a football mural" width="1200" height="799" loading="lazy" decoding="async"><figcaption>Our office is on Breck Road, near Anfield</figcaption></figure>
+    <figure><img src="../assets/img/keys.webp" alt="House keys passed from one hand to another" width="900" height="1125" loading="lazy" decoding="async"><figcaption>From the offer to the keys</figcaption></figure>
+    <figure><img src="../assets/img/liver-building.webp" alt="The clock towers of the Royal Liver Building" width="900" height="1125" loading="lazy" decoding="async"><figcaption>Liverpool, 9,600 km from Hong Kong</figcaption></figure>
+  </div>
+</section>
+
+<section class="sec tags-sec" aria-labelledby="h-fees">
+  <div class="wrap">
+    <h2 id="h-fees">Five services, five prices</h2>
+    <p class="intro">No hard sell, and nothing added later. Pay after the work is done where shown.</p>
+    <div class="rack">
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">Viewing report</span><b class="tag-price">HK$450</b><span class="tag-note">pay after the viewing</span><p class="tag-body">Street, every room, meters and pipes on video, plus our view on the price.</p></div>
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">Buying service</span><b class="tag-price">1%</b><span class="tag-note">of the price, on completion</span><p class="tag-body">Offer, agent, solicitor and paperwork, all the way to the keys.</p></div>
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">Tenant find</span><b class="tag-price">1 month</b><span class="tag-note">of rent</span><p class="tag-body">Rent advice, photos, listing, viewings, tenancy agreement, deposit registration.</p></div>
+      <div class="tag "><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">Full management</span><b class="tag-price">12%</b><span class="tag-note">of the rent</span><p class="tag-body">Tenants, repairs and the deposit claim when they leave.</p></div>
+      <div class="tag tag-red"><span class="tag-hole" aria-hidden="true"></span><span class="tag-label">Airbnb</span><b class="tag-price">15% <small>+ VAT</small></b><span class="tag-note">of bookings</span><p class="tag-body">Listing, pricing, cleaning, check-in and replies around the clock.</p></div>
+    </div>
+    <p class="more"><a class="btn" href="services.html">What each fee includes</a></p>
+  </div>
+</section>
+
+<section class="sec viewing" aria-labelledby="h-view">
+  <div class="wrap view-in">
+    <figure class="view-photo"><img src="../assets/img/hallway.webp" alt="Bright hallway of a house, front door at the end" width="1200" height="1500" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2 id="h-view">We view it for you, for HK$450</h2>
+      <p class="intro">Send us the listing link. We book the viewing with the agent and film:</p>
+      <ol class="report">
+        <li>The street, and whether houses nearby stand empty</li>
+        <li>Every room and the back garden</li>
+        <li>Electricity, water and gas meters, and the pipes</li>
+        <li>Signs of leaks, with a repair estimate</li>
+        <li>Parking, garage or driveway</li>
+        <li>Our view: is the price right, is it worth buying</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-band">
+  <img class="band-photo" src="../assets/img/terrace.webp" alt="Row of red-brick terraced houses with parked cars" width="1600" height="1066" loading="lazy" decoding="async">
+  <div class="wrap band-in">
+    <h2 id="h-band">Found one? We take it to the keys</h2>
+    <p>Offer, agent, solicitor, paperwork and completion, for 1% of the price, paid when the sale completes.</p>
+  </div>
+</section>
+
+<section class="sec bnb" aria-labelledby="h-bnb">
+  <div class="wrap bnb-in">
+    <div>
+      <img class="badge" src="../assets/img/superhost.webp" alt="Airbnb Superhost" width="600" height="408" loading="lazy" decoding="async">
+      <h2 id="h-bnb">Airbnb, from renovation to check-in</h2>
+      <blockquote lang="en"><p>“Fast communication! … The home was very clean and had clear listed instructions on how to operate everything.”</p>
+        <cite>Michael, from FL, USA, guest review</cite></blockquote>
+      <p><a class="btn" href="airbnb.html">How Airbnb management works</a></p>
+    </div>
+    <figure><img src="../assets/img/airbnb-room.webp" alt="Hotel-style room with a dark quilted wall and brass lamp" width="1600" height="1066" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="sec team-sec" aria-labelledby="h-team">
+  <div class="wrap team-in">
+    <figure><img src="../assets/img/hong-kong.webp" alt="Hong Kong skyline and Victoria Harbour at dusk" width="1600" height="1066" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2 id="h-team">Buying in Liverpool since 2016</h2>
+      <p class="intro">We started as Hong Kong investors here ourselves, so we know which questions you will have.</p>
+      <ul class="names">
+        <li><b>Bryan Wong</b> buying and conversions</li>
+        <li><b>Evan Wong</b> lettings, rules and tenants</li>
+        <li><b>Hugo Wong</b> repairs and renovation team</li>
+      </ul>
+      <p><a class="btn btn-line" href="team.html">Meet the team</a></p>
+    </div>
+  </div>
+</section>
+<section class="sec where" aria-labelledby="h-where">
+  <div class="wrap where-in">
+    <div class="mapcard" data-map>
+      <svg class="map-fallback" viewBox="0 0 600 420" role="img" aria-label="Sketch map: 299 Breck Road, near Anfield">
+        <rect width="600" height="420" fill="#eef0ea"/>
+        <path d="M-10 300 C150 270 330 250 610 140" stroke="#fff" stroke-width="22" fill="none"/>
+        <path d="M200 -10 L260 430" stroke="#fff" stroke-width="12" fill="none"/>
+        <rect x="330" y="40" width="150" height="110" rx="16" fill="#d9e4d4"/>
+        <text x="405" y="102" text-anchor="middle" font-size="18" fill="#3c4a40">Anfield</text>
+        <text x="80" y="268" font-size="16" fill="#3c4a40" transform="rotate(-8 80 268)">Breck Road</text>
+        <circle cx="300" cy="248" r="12" fill="#c8102e"/>
+      </svg>
+    </div>
+    <div class="where-text">
+      <h2 id="h-where">299 Breck Road, Liverpool</h2>
+      <p>Our office is in Liverpool, so someone local can be at your property the same week.</p>
+      <p class="addr">299 Breck Road<br>Liverpool L5 6PU<br><a href="mailto:info@ulinkproperty.co.uk">info@ulinkproperty.co.uk</a><br><a href="https://www.facebook.com/ulinkps" target="_blank" rel="noopener">Facebook @ULINKPS</a></p>
+      <img class="where-photo" src="../assets/img/anfield-gates.webp" alt="The gates of Anfield stadium" width="1200" height="799" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+</main>
+<script type="application/json" id="map-data">{"home": [-2.9553686, 53.4245782], "mark": "https://uxcircles.github.io/ulinkproperty/assets/img/favicon.svg", "label": "ULINK, 299 Breck Road", "places": [{"at": [-2.9608, 53.4308], "name": "Anfield"}]}</script>
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <svg class="foot-mark" viewBox="0 0 64 64" aria-hidden="true"><path class="tm-card" d="M14 6h36a4 4 0 0 1 4 4v44a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4Z"/><circle class="tm-hole" cx="32" cy="15" r="4"/><path class="tm-u" d="M22 26v14a10 10 0 0 0 20 0V26"/></svg>
+      <p><strong lang="zh-Hant-HK">英聯物業管理</strong><br><span lang="en">ULINK Property Services Limited</span></p>
+    </div>
+    <div class="foot-col">
+      <p>299 Breck Road, Liverpool L5 6PU<br><a href="mailto:info@ulinkproperty.co.uk">info@ulinkproperty.co.uk</a><br><a href="https://www.facebook.com/ulinkps" target="_blank" rel="noopener">Facebook @ULINKPS</a></p>
+    </div>
+    <div class="foot-col">
+      <p>Registered in England, company no. 12359766<br>
+      Member of the Property Redress Scheme. Registered with the ICO.</p>
+      <p><a href="privacy.html">Privacy</a> · <div class="foot-langs"><a href="../" lang="zh-Hant-HK" hreflang="zh-Hant-HK">中文</a><a href="../en/" lang="en-GB" hreflang="en-GB" aria-current="true">EN</a></div></p>
+    </div>
+  </div>
+  <div class="wrap"><p class="concept-note">Unofficial redesign concept by <a href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a></p></div>
+</footer>
+<nav class="mbar" aria-label="Quick actions">
+  <a href="mailto:info@ulinkproperty.co.uk">Email</a>
+  <a href="https://m.me/ulinkps" target="_blank" rel="noopener">Messenger</a>
+  <a class="mbar-main" href="index.html#calc">Fees</a>
+</nav>
+</body>
+</html>
