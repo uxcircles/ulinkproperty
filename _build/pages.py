@@ -197,7 +197,7 @@ def calculator(p):
                        "輸入數字，即刻睇我哋收幾多、你袋幾多。")}</p>
   </div>
   <div class="hero-stage">
-    {img("house.webp", L("Brick semi-detached house in Liverpool with a sold sign", "利物浦一間已售出的紅磚半獨立屋"), 1600, 1200, "hero-photo", lazy=False, prefix=p)}
+    {img("house.webp", L("Brick semi-detached house with a for-sale sign", "掛住「出售」牌的紅磚半獨立屋"), 1600, 1200, "hero-photo", lazy=False, prefix=p)}
     <div class="wrap">
       <form class="board" id="calc" aria-label="{L('Fee calculator', '收費計算機')}" onsubmit="return false">
         <div class="board-in">
